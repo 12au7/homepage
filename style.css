@@ -1,5 +1,5 @@
 body {
-  font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Quicksand', sans-serif;
   padding: 12% 50px 150px;
   font-size: 13px;
   text-align: center;
@@ -22,7 +22,7 @@ ul {
 }
 
 ul li {
-  font: bold 12px/18px sans-serif;
+  font: bold 14px 'Quicksand';
   display: inline-block;
   margin-right: -4px;
   position: relative;
@@ -36,10 +36,12 @@ ul li {
   -o-transition: all 0.2s;
   transition: all 0.2s;
 }
+
 ul li:hover {
   background: #be5224;
   color: #110e0b;
 }
+
 ul li ul {
   padding: 0;
   position: absolute;
@@ -52,18 +54,23 @@ ul li ul {
   display: none;
   opacity: 0;
   visibility: hidden;
-  -webkit-transiton: opacity 0.2s;
+  -webkit-transition: opacity 0.2s;
   -moz-transition: opacity 0.2s;
   -ms-transition: opacity 0.2s;
   -o-transition: opacity 0.2s;
-  -transition: opacity 0.2s;
+  transition: opacity 0.2s;
 }
+
 ul li ul li { 
   background: #be5224; 
   display: block; 
   color: #110e0b;
 }
-ul li ul li:hover { background: #8d3d1b; }
+
+ul li ul li:hover { 
+  background: #8d3d1b;
+}
+
 ul li:hover ul {
   display: block;
   opacity: 1;
