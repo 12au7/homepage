@@ -1,0 +1,71 @@
+body {
+  font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  padding: 12% 50px 150px;
+  font-size: 13px;
+  text-align: center;
+  background: #110e0b;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  color: #110e0b;
+}
+
+ul {
+  text-align: left;
+  display: inline;
+  margin: 0;
+  padding: 15px 4px 17px 0;
+  list-style: none;
+  background-color: #754029;
+}
+
+ul li {
+  font: bold 12px/18px sans-serif;
+  display: inline-block;
+  margin-right: -4px;
+  position: relative;
+  padding: 15px 20px;
+  background: #754029;
+  cursor: pointer;
+  color: #c6afa3;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+ul li:hover {
+  background: #be5224;
+  color: #110e0b;
+}
+ul li ul {
+  padding: 0;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 150px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transiton: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -ms-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  -transition: opacity 0.2s;
+}
+ul li ul li { 
+  background: #be5224; 
+  display: block; 
+  color: #110e0b;
+}
+ul li ul li:hover { background: #8d3d1b; }
+ul li:hover ul {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
