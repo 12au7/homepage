@@ -49,9 +49,9 @@ ul li:hover, .clicked {
 ul li ul {
   padding: 0;
   position: absolute;
-  top: 48px;
+  top: 53px;
   left: 0;
-  width: 150px;
+  width: 151px;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
