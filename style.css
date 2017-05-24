@@ -26,7 +26,7 @@ ul {
 }
 
 ul li {
-  font: bold 18px 'Quicksand';
+  font: 18px 'Quicksand';
   display: inline-block;
   margin-right: -4px;
   position: relative;
@@ -40,8 +40,11 @@ ul li {
   -o-transition: all 0.2s;
   transition: all 0.2s;
 }
+.mainul{
+  z-index: 10;
+}
 
-ul li:hover, .clicked {
+.hover1, .clicked {
   background: #be5224;
   color: #110e0b;
 }
@@ -58,27 +61,35 @@ ul li ul {
   display: none;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity 0.2s;
-  -moz-transition: opacity 0.2s;
-  -ms-transition: opacity 0.2s;
-  -o-transition: opacity 0.2s;
-  transition: opacity 0.2s;
+  z-index: -10;
 }
 
 ul li ul li { 
-  background: #be5224; 
+  background: hsl(17.9,68.1%,50%); 
   display: block; 
   color: #110e0b;
+  transition: all 0.2s ease-out;
 }
 
-ul li ul li:hover { 
+.hover2 { 
   background: #8d3d1b;
 }
 
-.dropdown, ul li:hover ul {
+.dropdown, .tempdrop {
   display: block;
-  opacity: 1;
   visibility: visible;
+  animation: dropdownanimation .1s ease-out forwards;
+}
+
+@keyframes dropdownanimation {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform : translateY(0);
+    }
 }
 
 form {
