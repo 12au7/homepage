@@ -5,6 +5,10 @@ body {
   text-align: center;
   background: #110e0b;
   text-decoration: none;
+  width: 75%;
+  position: fixed;
+  left: 50%;
+  margin-left: -37.5%;
 }
 
 a {
@@ -16,14 +20,13 @@ a {
 ul {
   text-align: left;
   display: inline;
-  margin: 0;
   padding: 15px 4px 17px 0;
   list-style: none;
   background-color: #754029;
 }
 
 ul li {
-  font: bold 14px 'Quicksand';
+  font: bold 18px 'Quicksand';
   display: inline-block;
   margin-right: -4px;
   position: relative;
@@ -76,4 +79,35 @@ ul li ul li:hover {
   display: block;
   opacity: 1;
   visibility: visible;
+}
+
+form {
+  position: relative;
+  bottom: 120px;
+}
+
+input {
+  width: 30%;
+  height: 40px;
+  font-size: 25px;
+  font-family: 'Quicksand', sans-serif;
+  background-color: rgb(28,23,18);
+  border: none;
+  color: #c6afa3;
+  text-align: center;
+}
+
+:focus {
+    outline: none;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: rgb(198,175,163);
+  color: rgba(198,175,163,0.3);
+  font-family: 'Quicksand Bold', sans-serif;
+}
+::-moz-placeholder { /* Firefox 19+ */  
+  color: rgb(198,175,163);
+  color: rgba(198,175,163,0.3);
+  font-family: 'Quicksand Bold', sans-serif;
 }
