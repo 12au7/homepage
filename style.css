@@ -41,8 +41,10 @@ ul li {
   -o-transition: all 0.2s;
   transition: all 0.2s;
 }
-.mainul{
+
+.mainul {
   z-index: 10;
+  margin: 0;
 }
 
 .hover1, .clicked {
@@ -50,12 +52,11 @@ ul li {
   color: #110e0b;
 }
 
-ul li ul {
+.secondul {
   padding: 0;
   position: absolute;
   top: 53px;
   left: 0;
-  width: 151px;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
@@ -63,13 +64,17 @@ ul li ul {
   opacity: 0;
   visibility: hidden;
   z-index: -10;
+  width: inherit;
 }
 
-ul li ul li { 
+.class-2 { 
   background: hsl(17.9,68.1%,50%); 
   display: block; 
   color: #110e0b;
   transition: all 0.2s ease-out;
+  padding: 15px 10px;
+  text-align: left;
+  width: 135px;
 }
 
 .hover2 { 
@@ -83,14 +88,14 @@ ul li ul li {
 }
 
 @keyframes dropdownanimation {
-    from {
-        opacity: 0;
-        transform: translateY(-50px);
-    }
-    to {
-        opacity: 1;
-        transform : translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform : translateY(0);
+  }
 }
 
 form {
@@ -111,7 +116,7 @@ input {
   border: none;
   color: #c6afa3;
   text-align: center;
-  border-radius: 3px;
+  border-radius: 4px;
 }
 
 :focus {
