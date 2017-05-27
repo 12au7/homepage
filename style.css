@@ -5,9 +5,8 @@ body {
   text-align: center;
   background: #110e0b;
   text-decoration: none;
-  width: 75%;
   position: fixed;
-  margin: 0 auto;
+  margin: 0;
   left: 0;
   right: 0;
 }
