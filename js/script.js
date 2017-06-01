@@ -24,16 +24,30 @@ $(document).on('keyup',function(evt) {
 });
 
 $(".class-main").click(function(){
-	$(".secondul", this).toggleClass("dropdown");
-	$(this).toggleClass("clicked");
+    $(".secondul", this).toggleClass("dropdown");
+    $(this).toggleClass("clicked");
 });
 $(".class-main").hover(function(){
-	$(this).toggleClass("hover1");
+    $(this).toggleClass("hover1");
     $(".secondul", this).toggleClass("tempdrop");
 });
 $(".class-2").hover(function(){
-	$(this).toggleClass("hover2");
+    $(this).toggleClass("hover2");
 });
 $(".mainul").mouseleave(function(){
     $(".class-main").removeClass("hover1 dropdown");
+});
+
+$(document).ready(function(){
+  $.ajax({
+    url: "https://coinmarketcap-nexuist.rhcloud.com/api/eth",
+    dataType: 'json',
+    success: function(data) {
+      $("#eth-usd").text(data.price.usd);
+      $("#eth-btc").text(data.price.btc);
+    },
+    error: function() {
+      $("#ethereum").text("Error");
+    }
+    });
 });

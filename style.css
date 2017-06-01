@@ -11,6 +11,17 @@ body {
   right: 0;
 }
 
+.ether {
+  font-size: 30px;
+  color: #c6afa3;
+  position: fixed;
+  margin: 0;
+  left: 0;
+  right: 0;
+  top: 3%;
+  font-family: 'Arvo', serif;;
+}
+
 a {
   text-decoration: none;
   color: #110e0b;
@@ -18,9 +29,8 @@ a {
 }
 
 ul {
-  text-align: left;
   display: inline;
-  padding: 15px 4px 17px 0;
+  padding: 0;
   list-style: none;
   background-color: #754029;
 }
@@ -42,8 +52,19 @@ ul li {
 }
 
 .mainul {
-  z-index: 10;
-  margin: 0;
+  z-index: 1;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 20%;
+  background: none;
+}
+
+.main-class {
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
 }
 
 .hover1, .clicked {
@@ -84,6 +105,7 @@ ul li {
   display: block;
   visibility: visible;
   animation: dropdownanimation .1s ease-out forwards;
+  z-index: 4;
 }
 
 @keyframes dropdownanimation {
@@ -101,7 +123,7 @@ form {
   position: fixed;
   top: 10%;
   left: 0;
-  right:0;
+  right: 0;
   margin: 0 auto;
   width: 20%;
 }
@@ -133,10 +155,10 @@ input {
   font-family: 'Quicksand Bold', sans-serif;
 }
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-height: 600px) {
     form {
-      top: 25%;
-      width:300px;
+      top: 50%;
+      width: 300px;
       z-index: -5;
     }
 }
