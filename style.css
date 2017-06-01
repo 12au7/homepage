@@ -132,3 +132,9 @@ input {
   color: rgba(198,175,163,0.3);
   font-family: 'Quicksand Bold', sans-serif;
 }
+@media only screen and (max-width: 1400px) {
+    form {
+      top: 25%;
+      width:300px;
+    }
+}
