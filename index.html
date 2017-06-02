@@ -13,7 +13,19 @@
   <form action="http://www.google.com/search" class="searchform" method="get" name="searchform" target="_self">
     <input autocomplete="off" class="form-controls search" name="q" placeholder="Google Search" required="required"  type="text">
   </form>
+
   <p class="ether"><a class="ether" id="etherlink" href="https://www.gdax.com/trade/ETH-USD"> Ethereum</a> is $<span id="eth-usd"></span>/ <span id="eth-btc"></span> BTC</p>
+
+  <div class="calc">
+    <form class="calculator" action="javascript:;" onsubmit="myFunction(this)" method="get">
+      <input class="calc-in num" id="v1" type="number" value="" placeholder="V1">
+      <input class="calc-in num" id="v2" type="number" value="" placeholder="V2">
+      <input class="calc-in but" type="submit" value="Calculate">
+      <input class="calc-in but" type="reset" value="Reset">
+    </form>
+    <p class="pdiff">The percent difference is: <span id="pdiff"></span>%</p>
+  </div>
+
 
   <ul class="mainul">
     <li class="class-main">school

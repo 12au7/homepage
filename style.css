@@ -9,6 +9,7 @@ body {
   margin: 0;
   left: 0;
   right: 0;
+  color: #c6afa3;
 }
 
 a {
@@ -110,17 +111,12 @@ ul li {
 
 form {
   position: fixed;
-  top: 10%;
   left: 0;
   right: 0;
   margin: 0 auto;
-  width: 20%;
 }
 
 input {
-  width: 100%;
-  height: 40px;
-  font-size: 25px;
   font-family: 'Quicksand', sans-serif;
   background-color: rgb(28,23,18);
   border: none;
@@ -129,7 +125,50 @@ input {
   border-radius: 4px;
 }
 
-:focus {
+.searchform {
+  top: 10%;
+  width: 300px;
+}
+
+.search {
+  width: 100%;
+  height: 40px;
+  font-size: 25px;
+}
+
+.calc {
+  position: fixed;
+  top: 45%;
+  height: 100px;
+  width: 450px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.calculator {
+  position: relative;
+  display: inline-block;
+}
+
+.pdiff {
+  top: 50%;
+  display: none;
+  font-size: 18px;
+  font-family: 'Arvo', serif;
+}
+
+.calc-in {
+  height: 40px;
+  font-size: 18px;
+  font-family: 'Arvo', serif;
+}
+
+.num {
+  width: 80px;
+}
+
+.search:focus {
     outline: none;
 }
 
@@ -141,7 +180,7 @@ input {
   left: 0;
   right: 0;
   top: 3%;
-  font-family: 'Arvo', serif;;
+  font-family: 'Arvo', serif;
 }
 
 #etherlink {
@@ -158,6 +197,12 @@ input {
   color: rgb(198,175,163);
   color: rgba(198,175,163,0.3);
   font-family: 'Quicksand Bold', sans-serif;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
 }
 
 @media only screen and (max-height: 600px) {

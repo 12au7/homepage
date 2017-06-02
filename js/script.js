@@ -24,15 +24,15 @@ $(document).on('keyup',function(evt) {
 });
 
 $(".class-main").click(function(){
-    $(".secondul", this).toggleClass("dropdown");
-    $(this).toggleClass("clicked");
+  $(".secondul", this).toggleClass("dropdown");
+  $(this).toggleClass("clicked");
 });
 $(".class-main").hover(function(){
-    $(this).toggleClass("hover1");
+  $(this).toggleClass("hover1");
     $(".secondul", this).toggleClass("tempdrop");
 });
 $(".class-2").hover(function(){
-    $(this).toggleClass("hover2");
+  $(this).toggleClass("hover2");
 });
 $(".mainul").mouseleave(function(){
     $(".class-main").removeClass("hover1 dropdown");
@@ -50,4 +50,16 @@ $(document).ready(function(){
       $("#ethereum").text("Error");
     }
     });
+});
+
+$(".calculator").submit(function(){
+    var v1 = parseFloat($("#v1").val());
+    var v2 = parseFloat($("#v2").val());
+    var difference = parseFloat(Math.abs(v1 - v2)/((v1 + v2)/2) * 100).toFixed(3);
+    $("p.pdiff").fadeIn(200);
+    $("#pdiff").text(difference);
+});
+
+$(".calculator").on("reset", function(){
+    $("p.pdiff").fadeOut(200);
 });
