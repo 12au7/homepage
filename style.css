@@ -11,17 +11,6 @@ body {
   right: 0;
 }
 
-.ether {
-  font-size: 30px;
-  color: #c6afa3;
-  position: fixed;
-  margin: 0;
-  left: 0;
-  right: 0;
-  top: 3%;
-  font-family: 'Arvo', serif;;
-}
-
 a {
   text-decoration: none;
   color: #110e0b;
@@ -142,6 +131,22 @@ input {
 
 :focus {
     outline: none;
+}
+
+.ether {
+  font-size: 30px;
+  color: #c6afa3;
+  position: fixed;
+  margin: 0;
+  left: 0;
+  right: 0;
+  top: 3%;
+  font-family: 'Arvo', serif;;
+}
+
+#etherlink {
+  display: inline;
+  position: relative;
 }
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
