@@ -55,9 +55,17 @@ $(document).ready(function(){
 $(".calculator").submit(function(){
     var v1 = parseFloat($("#v1").val());
     var v2 = parseFloat($("#v2").val());
-    var difference = parseFloat(Math.abs(v1 - v2)/((v1 + v2)/2) * 100).toFixed(3);
-    $("p.pdiff").fadeIn(200);
-    $("#pdiff").text(difference);
+    var difference = parseFloat(((v2 - v1)/(v1))  * 100).toFixed(3);
+    if(difference > 0) {
+      $("p.pdiff").fadeIn(200);
+      $("#pstate").text('increased').css("color", "#36af42");
+      $("#pdiff").text(difference);
+    } else {
+      $("p.pdiff").fadeIn(200);
+      $("#pstate").text('decreased').css("color", "#ba551b");
+      $("#pdiff").text(Math.abs(difference));
+    }
+
 });
 
 $(".calculator").on("reset", function(){
