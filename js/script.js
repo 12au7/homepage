@@ -35,8 +35,10 @@ $(document).ready(function(){
     });
 
     $.getJSON("https://api.coinmarketcap.com/v1/ticker/ethereum/", function(data) {
-        $("#eth-usd").text(data[0].price_usd);
-        $("#eth-btc").text(data[0].price_btc);
+        var eth_usd_float = parseFloat(data[0].price_usd).toFixed(2);
+        var eth_btc_float = parseFloat(data[0].price_btc).toFixed(5);
+        $("#eth-usd").text(eth_usd_float);
+        $("#eth-btc").text(eth_btc_float);
         var eth_diff = parseFloat(data[0].percent_change_24h);
         if (eth_diff > 0) {
             $("#eth_change").text(data[0].percent_change_24h + "%").css("color", "#36af42");
